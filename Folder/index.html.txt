@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wallet Address</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 40px; }
+    .wallet { font-size: 18px; margin: 20px 0; }
+    button { padding: 10px 20px; cursor: pointer; }
+    img { max-width: 300px; margin: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Support Us</h1>
+  
+  <!-- Wallet Address -->
+  <div class="wallet" id="wallet">0x123456789ABCDEF123456789ABCDEF1234567890</div>
+  <button onclick="copyWallet()">Copy Address</button>
+  
+  <!-- QR Code -->
+  <div>
+    <img src="your-qr-code.png" alt="Wallet QR Code">
+  </div>
+  
+  <!-- Pictures explaining the site -->
+  <div>
+    <img src="about1.jpg" alt="About Image 1">
+    <img src="about2.jpg" alt="About Image 2">
+  </div>
+  
+  <script>
+    function copyWallet() {
+      const wallet = document.getElementById("wallet").innerText;
+      navigator.clipboard.writeText(wallet);
+      alert("Wallet address copied!");
+    }
+  </script>
+</body>
+</html>
